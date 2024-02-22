@@ -141,8 +141,8 @@ impl Spinner {
               // also notify any status listeneners
               self.send_status_event( &NodeEvent::ROS(part_update) );
             }
-            Err(e) => {
-              warn!("ros_discovery_info error {e:?}");
+            Err(_e) => {
+              // warn!("ros_discovery_info error {e:?}");
             }
           }
         }

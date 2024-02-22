@@ -37,7 +37,7 @@ fn main() {
       let message = format!("count={} {}", count, filler);
       println!("Talking, count={} len={}", count, message.len());
       let _ = chatter_publisher.async_publish(message).await;
-      Timer::after(std::time::Duration::from_secs(2)).await;
+      Timer::after(std::time::Duration::from_millis(2)).await;
     }
   });
 }
